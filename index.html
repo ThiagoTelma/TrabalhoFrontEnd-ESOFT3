@@ -10,50 +10,133 @@
         <!--CSS-->
         <link rel="stylesheet" href="CSS/style.css" />
         <link
+            href="https://db.onlinewebfonts.com/c/2aea0ac500c896188f9ad191c231029c?family=Orpheus+Pro"
+            rel="stylesheet"
+        />
+        <link
             rel="stylesheet"
             href="icones/fontawesome-free-6.6.0-web/css/all.css"
         />
-        <link rel="icon" href="./imagens/valorantLogo-removebg-preview.png" />
         <title>Home</title>
 
         <script src="js/script.js" defer></script>
     </head>
     <body>
-        <div class="navigation-bar">
-            <div id="container">
-                <a
-                    href="https://playvalorant.com/pt-br/"
-                    class="nav"
-                    target="_blank"
-                >
-                    <img
-                        class="logo"
-                        src="./imagens/valorantLogo-removebg-preview.png"
-                        alt="logo"
-                    />
-                </a>
-                <ul class="ul-nav">
-                    <li>
-                        <a href="#" class="nav"
-                            ><i class="fa-solid fa-circle-info"></i
-                            >INFORMAÇÕES</a
-                        >
-                    </li>
-                    <li>
-                        <a href="tutoriais.html" class="nav"
-                            ><i class="fa-solid fa-video"></i>TUTORIAIS</a
-                        >
-                    </li>
-                    <li>
-                        <a href="Contact.html" class="nav"
-                            ><i class="fa-brands fa-neos"></i>NOVIDADES</a
-                        >
-                    </li>
+        <header>
+            <h1>Plants</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
+            </nav>
+            <div class="icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
             </div>
-        </div>
+        </header>
 
-        <div class="container-slider">
+        <section class="first-background">
+            <img src="imagens/background.jpg" alt="background" />
+            <div class="overlay">
+                <h1>
+                    Plantas e vasos <br />
+                    para a sua casa
+                </h1>
+            </div>
+        </section>
+
+        <section class="favorites">
+            <div class="title">
+                <h2>Os favoritos dos fãs</h2>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="imagens/pequena.jpg" alt="Planta pequena" />
+                    <h3>Pequenas</h3>
+                    <button class="favorite-bt">Compre agora</button>
+                </div>
+                <div class="card">
+                    <img src="imagens/complexa.jpg" alt="Planta complexa" />
+                    <h3>Mais complexas</h3>
+                    <button class="favorite-bt">Compre agora</button>
+                </div>
+                <div class="card">
+                    <img src="imagens/fácil.jpg" alt="Planta fácil de cuidar" />
+                    <h3>Fáceis de cuidar</h3>
+                    <button class="favorite-bt">Compre agora</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <img src="imagens/background2.jpg" alt="Plantas decorativas" />
+        </section>
+
+        <section class="buscar">
+            <div class="title">
+                <h2>O que você busca?</h2>
+            </div>
+            <div class="gifs-container">
+                <div class="gif">
+                    <img src="imagens/gifs/gif1.gif" alt="Planta pequena" />
+                    <h3>Procurando flores?</h3>
+                    <p>
+                        As plantas com flores são lindas, mas dão mais trabalho
+                        do que as que não florescem. Saiba como cuidar delas.
+                    </p>
+                    <button class="gif-bt">Saiba mais</button>
+                </div>
+                <div class="gif">
+                    <img src="imagens/gifs/gif2.gif" alt="Planta complexa" />
+                    <h3>Procurando suculentas?</h3>
+                    <p>
+                        Uma janela ensolarada é tudo o que as suculentas
+                        precisam. Essas plantas lindas e resistentes são muito
+                        fáceis de cuidar.
+                    </p>
+                    <button class="gif-bt">Saiba mais</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mail-section">
+            <div class="mail-content">
+                <h1>Elas crescem muito rápido.</h1>
+                <p>
+                    Não perca nada. Cadastre-se para receber notícias e
+                    atualizações.
+                </p>
+                <form>
+                    <input
+                        type="email"
+                        placeholder="Endereço de e-mail"
+                        required
+                    />
+                    <button type="submit">Cadastre-se</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="gift-section">
+            <div class="gift-card">
+                <img src="imagens/giftcard-template.jpg" alt="Gift Card" />
+            </div>
+            <div class="gift-content">
+                <h2>Dê plantas de presente</h2>
+                <p>
+                    As plantas são um ótimo presente, assim como as flores, mas
+                    duram muito mais. Com um vale-presente para trocar por uma
+                    planta em vaso, você pode dar um toque de vida à casa, ao
+                    escritório ou ao quarto de qualquer pessoa. Eles estão
+                    disponíveis em vários valores, e o envio é gratuito!
+                </p>
+                <button>Adquira um vale-presente</button>
+            </div>
+        </section>
+
+        <!-- <div class="container-slider">
             <button id="prev-button">
                 <img src="./Carousel/arrow.png" alt="prev-button" />
             </button>
@@ -66,172 +149,25 @@
             <button id="next-button">
                 <img src="./Carousel/arrow.png" alt="next-button" />
             </button>
-        </div>
+        </div> -->
 
-        <div class="card-container">
-            <div class="title">
-                <span class="title-main">VALORANT</span>
-                <p>
-                    Valorant é um jogo eletrônico multijogador gratuito para
-                    jogar de tiro em primeira pessoa desenvolvido e publicado
-                    pela Riot Games. É o primeiro jogo do gênero desenvolvido
-                    pela empresa, sendo anunciado pela primeira vez com o
-                    codinome Project A em outubro de 2019, em um evento de
-                    comemoração de 10 anos de League of Legends. Foi lançado em
-                    2 de junho de 2020 para Microsoft Windows.
-                </p>
-                <span class="subtitle">
-                    MAPAS <i class="fa-solid fa-arrow-down"></i
-                ></span>
-            </div>
-            <div class="card">
-                <img src="imagens/mapas/Ascent.jpg" alt="mapa ascent" />
-                <div class="card-content">
-                    <h1>ASCENT</h1>
-                    <p>
-                        Um território aberto divide duas áreas em Ascent. Cada
-                        uma pode ser fortificada por portas explosivas
-                        irreversíveis que, quando derrubadas, forçam as equipes
-                        a destruí-las ou a acharem outra maneira de prosseguir.
-                    </p>
-                    <a
-                        href="https://playvalorant.com/pt-br/maps/"
-                        target="_blank"
-                        class="btn"
-                        >Saiba mais</a
-                    >
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <h2>Crosby</h2>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="imagens/mapas/split.jpg" alt="mapa split" />
-                <div class="card-content">
-                    <h1>SPLIT</h1>
-                    <p>
-                        Cada ponto tem uma torre imponente que é vital para o
-                        controle da área. E não se esqueça: mantenha os olhos
-                        abertos e focados nas áreas elevadas antes que tudo vá
-                        pelos ares.
-                    </p>
-                    <a
-                        href="https://playvalorant.com/pt-br/maps/"
-                        target="_blank"
-                        class="btn"
-                        >Saiba mais</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <img src="imagens/mapas/haven2.png" alt="mapa Haven" />
-                <div class="card-content">
-                    <h1>HAVEN</h1>
-                    <p>
-                        Sob um mosteiro abandonado, é possível ouvir agentes se
-                        enfrentando pelo controle de três pontos distintos,
-                        neste mapa, há mais áreas para controlar.
-                    </p>
-                    <a
-                        href="https://playvalorant.com/pt-br/maps/"
-                        target="_blank"
-                        class="btn"
-                        >Saiba mais</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <img src="imagens/mapas/Bind.png" alt="mapa Bind" />
-                <div class="card-content">
-                    <h1>BIND</h1>
-                    <p>
-                        Dois pontos. Nenhuma área no meio. Você precisa
-                        escolher: direita ou esquerda? Ambos os lados oferecem
-                        caminhos diretos para os atacantes, e dois
-                        teleportadores de sentido único facilitam o
-                        flanqueamento.
-                    </p>
-                    <a
-                        href="https://playvalorant.com/pt-br/maps/"
-                        target="_blank"
-                        class="btn"
-                        >Saiba mais</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <img src="./imagens/mapas/icebox.jpg" alt="mapa icebox" />
-                <div class="card-content">
-                    <h1>ICEBOX</h1>
-                    <p>
-                        Você precisará ter cuidado com os terrenos horizontais
-                        dos dois pontos principais, que são protegidos por neve
-                        e metal. Aproveite para usar as tirolesas, e seus
-                        inimigos nunca verão seu ataque iminente.
-                    </p>
-                    <a
-                        href="https://playvalorant.com/pt-br/maps/"
-                        target="_blank"
-                        class="btn"
-                        >Saiba mais</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <img src="imagens/mapas/fracture.jpg" alt="mapa fracture" />
-                <div class="card-content">
-                    <h1>FRACTURE</h1>
-                    <p>
-                        Com opções tão divididas quanto o próprio mapa para os
-                        defensores, a escolha é sua: encare os atacantes na
-                        própria base deles ou prepare o terreno para um ataque
-                        iminente.
-                    </p>
-                    <a
-                        href="https://playvalorant.com/pt-br/maps/"
-                        target="_blank"
-                        class="btn"
-                        >Saiba mais</a
-                    >
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="footer">
-                <a href="https://playvalorant.com/pt-br/" target="_blank">
-                    <img
-                        src="./imagens/valorantLogo-removebg-preview.png"
-                        alt="logo_footer"
-                    />
-                </a>
-                <ul class="left-ul">
-                    <li>
-                        <a href="#"
-                            ><i class="fa-solid fa-circle-info"></i
-                            >INFORMAÇÕES</a
-                        >
-                    </li>
-                    <li>
-                        <a href="tutoriais.html"
-                            ><i class="fa-solid fa-video"></i>TUTORIAIS</a
-                        >
-                    </li>
-                    <li>
-                        <a href="Contact.html"
-                            ><i class="fa-brands fa-neos"></i>NOVIDADES</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#">©2024 All rights reserved.</a>
-                    </li>
-                </ul>
-                <div class="mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.7097074300355!2d-49.30173092382562!3d-25.481367034927548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce351e0b0e46b%3A0xabac87dacbdefea4!2sEAD%20UniCesumar%20-%20Curitiba%20-%20Campus%2FPR!5e0!3m2!1spt-BR!2sbr!4v1729187154572!5m2!1spt-BR!2sbr"
-                        width="400"
-                        height="300"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="#">Início</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Contato</a>
+                    </div>
                 </div>
             </div>
         </footer>
