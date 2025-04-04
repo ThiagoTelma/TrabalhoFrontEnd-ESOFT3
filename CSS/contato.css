@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Orpheus Pro";
+    line-height: 1.4em;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+header {
+    font-family: "Orpheus Pro";
+    line-height: 2em;
+    position: absolute; /* Mantém o header fixo sobre a imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background: transparent; /* Garante que o fundo é transparente */
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.icons i {
+    font-size: 18px;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra toda a área */
+}
+
+.overlay {
+    font-family: "Orpheus Pro";
+    position: absolute;
+    color: white;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin-bottom: 60px;
+}
+
+img {
+    display: block;
+}
+
+button {
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 30%;
+    background-color: #a8a6a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #8d8c8c;
+}
+
+/* Pop-Up*/
+
+/* Fundo do pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteúdo do pop-up */
+.popup-content {
+    background: white;
+    padding: 50px;
+    width: 50%;
+    height: 600px;
+    max-width: 700px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.popup-content h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+/* Botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Estilizando o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+label span {
+    font-weight: normal;
+    color: gray;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.submit-btn {
+    background: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #444;
+}
+
+/* Validação do Form*/
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+/* Error and Success */
+.form-control.invisible i.fa-check-circle,
+i.fa-exclamation-circle {
+    visibility: none;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #38383b;
+    width: 100%;
+    height: 30vh;
+    padding: 60px 60px;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+/* Layout flexível para alinhar os itens */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.footer-left h2 {
+    font-weight: 200;
+}
+
+.footer-left a {
+    color: #a3a3a3;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Parte direita com links */
+.footer-right {
+    display: flex;
+    gap: 40px;
+}
+
+/* Links do menu */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #a3a3a3;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}

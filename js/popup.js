@@ -1,5 +1,3 @@
-/*Form  Validation*/
-
 const form = document.getElementById("form");
 const nome = document.getElementById("nome");
 const sobrenome = document.getElementById("sobrenome");
@@ -12,11 +10,19 @@ form.addEventListener("submit", (e) => {
     checkInputs();
 });
 
+function openPopup() {
+    document.getElementById("popup-form").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup-form").style.display = "none";
+}
+
 function checkInputs() {
     const nomeValue = nome.value;
     const sobrenomeValue = sobrenome.value;
     const emailValue = email.value;
-    const textoValue = text.value;
+    const textoValue = texto.value;
 
     if (nomeValue === "") {
         setErrorFor(nome, "O nome é obrigatório.");
@@ -52,10 +58,10 @@ function checkInputs() {
 
     if (formIsValid) {
         alert("Inscrição concluída!");
-        form.reset();
         formControls.forEach((formControl) => {
             formControl.className = "form-control invisible";
         });
+        form.reset();
     }
 }
 
