@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Orpheus Pro";
+    line-height: 1.4em;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.first-background {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.first-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra toda a área */
+}
+
+.overlay {
+    font-family: "Orpheus Pro";
+    font-size: 2.5rem;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.overlay h1 {
+    font-weight: 300;
+}
+
+img {
+    display: block;
+}
+
+header {
+    font-family: "Orpheus Pro";
+    line-height: 2em;
+    position: absolute; /* Mantém o header fixo sobre a imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background: transparent; /* Garante que o fundo é transparente */
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.icons i {
+    font-size: 18px;
+}
+
+/* Historia Section*/
+
+.historia {
+    color: #eee;
+    background-color: #38383b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto {
+    line-height: 1.4em;
+    font-size: 2.2rem;
+    max-width: 60%;
+    margin-bottom: 100px;
+}
+
+/*slider*/
+.container-slider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+.container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1300px;
+}
+
+.slider {
+    opacity: 0;
+    transition: opacity 0.2s;
+    position: absolute;
+    width: 100%;
+    min-height: 700px;
+    max-height: 700px;
+    border-radius: 10px;
+}
+
+.on {
+    opacity: 1;
+}
+
+#prev-button,
+#next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img,
+#next-button img {
+    width: 100%;
+    height: 100%;
+}
+
+#prev-button {
+    transform: rotate(180deg);
+}
+
+
+/* Footer */
+.footer {
+    background-color: #38383b;
+    width: 100%;
+    height: 30vh;
+    padding: 60px 60px;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+/* Layout flexível para alinhar os itens */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.footer-left h2 {
+    font-weight: 200;
+}
+
+.footer-left a {
+    color: #a3a3a3;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Parte direita com links */
+.footer-right {
+    display: flex;
+    gap: 40px;
+}
+
+/* Links do menu */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #a3a3a3;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
