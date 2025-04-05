@@ -10,14 +10,6 @@ form.addEventListener("submit", (e) => {
     checkInputs();
 });
 
-function openPopup() {
-    document.getElementById("popup-form").style.display = "flex";
-}
-
-function closePopup() {
-    document.getElementById("popup-form").style.display = "none";
-}
-
 function checkInputs() {
     const nomeValue = nome.value;
     const sobrenomeValue = sobrenome.value;
@@ -87,4 +79,12 @@ function checkEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
         email
     );
+}
+
+function openPopup() {
+    document.getElementById("popup-form").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup-form").style.display = "none";
 }

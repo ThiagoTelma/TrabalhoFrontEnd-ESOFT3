@@ -190,10 +190,41 @@ nav ul li a {
     justify-content: space-between; /* Garante que os elementos se distribuam corretamente */
 }
 
-.card img {
+.card-img {
     max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translatey(-15px);
     height: 350px; /* Define uma altura fixa para todas as imagens */
     object-fit: cover; /* Faz com que as imagens sejam cortadas proporcionalmente */
+}
+
+/* Imagens padrão */
+.imagem1 {
+    background-image: url("../imagens/pequena.jpg");
+    opacity: 1;
+}
+.imagem2 {
+    background-image: url("../imagens/complexa.jpg");
+    opacity: 1;
+}
+.imagem3 {
+    background-image: url("../imagens/facil.jpg");
+    opacity: 1;
+}
+
+/* Imagens ao passar o mouse */
+.imagem1:hover {
+    content: url("../imagens/pequena-hover.jpg");
+}
+
+.imagem2:hover {
+    content: url("../imagens/complexa-hover.jpg");
+}
+
+.imagem3:hover {
+    content: url("../imagens/facil-hover.jpg");
 }
 
 .card h3 {
