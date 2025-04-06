@@ -9,6 +9,12 @@ section {
     padding: 0;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Poppins";
     line-height: 1.4em;
@@ -110,7 +116,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/*slider*/
+/* slider
 
 .container-slider {
     display: flex;
@@ -160,7 +166,7 @@ nav ul li a {
 
 #prev-button {
     transform: rotate(180deg);
-}
+} */
 
 /*favorites section*/
 
@@ -175,6 +181,7 @@ nav ul li a {
     gap: 20px;
     margin-bottom: 40px;
 }
+
 .favorites {
     color: #eee;
     background-color: #38383b;
@@ -653,6 +660,14 @@ nav ul li a {
         font-size: 1.5rem;
     }
 
+    .image-section {
+        width: 100%;
+    }
+
+    .mail-section {
+        width: 100%;
+    }
+
     .mail-content h1 {
         font-size: 2rem;
     }
@@ -672,5 +687,65 @@ nav ul li a {
 
     .footer-container {
         flex-direction: row;
+    }
+}
+
+@media (max-width: 1040px) {
+    .gifs-container,
+    .cards-container,
+    .gift-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gift-section {
+        gap: 30px;
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .gift-card,
+    .gift-content {
+        max-width: 90%;
+    }
+
+    .gif img {
+        height: auto;
+        max-height: 300px;
+    }
+
+    .image-section {
+        width: 100%;
+    }
+
+    .mail-section {
+        width: 100%;
+    }
+
+    .mail-content h1 {
+        font-size: 2rem;
+    }
+
+    .mail-content p {
+        font-size: 1rem;
+    }
+
+    .gift-content h2 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+        padding: 30px 20px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1600px) {
+    .gift-content h2 {
+        font-size: 2rem;
     }
 }
