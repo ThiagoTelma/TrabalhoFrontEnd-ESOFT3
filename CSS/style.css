@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 .first-background {
     width: 100%;
     height: 100vh;
@@ -78,6 +82,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -90,6 +96,8 @@ nav ul li a {
     display: flex;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .icons a {
@@ -550,7 +558,7 @@ nav ul li a {
 /* Responsividade */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
@@ -559,107 +567,110 @@ nav ul li a {
         flex-direction: column;
         margin-top: 20px;
     }
+
+    .gifs-container,
+    .cards-container,
+    .gift-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gift-section {
+        gap: 30px;
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .gift-card,
+    .gift-content {
+        max-width: 90%;
+    }
+
+    .gif img {
+        height: auto;
+        max-height: 300px;
+    }
 }
 
-/* Contato page*/
+@media (min-width: 1600px) {
+    .container-images {
+        width: 1600px;
+    }
 
-.container {
-    background-color: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 700px;
-    margin-right: 500px;
-    margin-bottom: 40px;
-    max-width: 100%;
-    overflow: hidden;
+    .title {
+        font-size: 3rem;
+    }
+
+    .mail-content p {
+        font-size: 1.5rem;
+    }
+
+    .gift-content p {
+        font-size: 1.4rem;
+    }
 }
 
-.header {
-    background-color: #eee;
-    padding: 20px;
-}
+@media (max-width: 590px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
 
-.form {
-    padding: 20px;
-}
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 
-.form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-}
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
 
-.form-control label {
-    margin-bottom: 5px;
-}
+    nav ul li a {
+        font-size: 1rem;
+    }
 
-.form-control .input {
-    border: 2px solid #f0f0f0;
-    display: block;
-    border-radius: 10px;
-    font-size: 14px;
-    width: 100%;
-    padding: 10px;
-}
+    .icons {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.form-control i {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    visibility: hidden;
-}
+    .overlay {
+        font-size: 2rem;
+        padding: 20px;
+    }
 
-.form-control small {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-}
+    .title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
 
-.form button {
-    background-color: #333;
-    border: 2px solid #333;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-}
+    .gif h3 {
+        font-size: 1.5rem;
+    }
 
-.form button:hover {
-    background-color: #292c2e;
-    border-color: #292c2e;
-}
+    .mail-content h1 {
+        font-size: 2rem;
+    }
 
-.form-radio {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-}
+    .mail-content p {
+        font-size: 1rem;
+    }
 
-.form-radio .Sexo {
-    display: block;
-}
+    .gift-content h2 {
+        font-size: 2rem;
+    }
 
-/* Error and Success */
+    .footer {
+        font-size: 1rem;
+        padding: 30px 20px;
+    }
 
-.form-control.invisible i.fa-check-circle,
-i.fa-exclamation-circle {
-    visibility: none;
-}
-
-.form-control.success i.fa-check-circle {
-    color: #2ecc71;
-    visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
-}
-
-.form-control.error small {
-    visibility: visible;
-    color: #e74c3c;
+    .footer-container {
+        flex-direction: row;
+    }
 }
