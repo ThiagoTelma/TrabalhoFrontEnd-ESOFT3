@@ -116,60 +116,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* slider
-
-.container-slider {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    gap: 1rem;
-}
-
-.container-images {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1300px;
-}
-
-.slider {
-    opacity: 0;
-    transition: opacity 0.2s;
-    position: absolute;
-    width: 100%;
-    min-height: 700px;
-    max-height: 700px;
-    border-radius: 10px;
-}
-
-.on {
-    opacity: 1;
-}
-
-#prev-button,
-#next-button {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#prev-button img,
-#next-button img {
-    width: 100%;
-    height: 100%;
-}
-
-#prev-button {
-    transform: rotate(180deg);
-} */
-
 /*favorites section*/
-
 .title {
     font-family: "Orpheus Pro";
     font-size: 2.5rem;
@@ -654,30 +601,6 @@ nav ul li a {
     .title {
         font-size: 1.8rem;
         text-align: center;
-    }
-
-    .gif h3 {
-        font-size: 1.5rem;
-    }
-
-    .image-section {
-        width: 100%;
-    }
-
-    .mail-section {
-        width: 100%;
-    }
-
-    .mail-content h1 {
-        font-size: 2rem;
-    }
-
-    .mail-content p {
-        font-size: 1rem;
-    }
-
-    .gift-content h2 {
-        font-size: 2rem;
     }
 
     .footer {
