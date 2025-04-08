@@ -1,12 +1,8 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-section {
-    margin: 0;
-    padding: 0;
 }
 
 html,
@@ -16,28 +12,24 @@ body {
 }
 
 body {
-    font-family: "Orpheus Pro";
+    font-family: "Orpheus Pro", serif;
     line-height: 1.4em;
     background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    overflow-x: hidden;
 }
+
+/* Header */
 header {
-    font-family: "Orpheus Pro";
-    line-height: 2em;
-    position: absolute; /* Mantém o header fixo sobre a imagem */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
-    background: transparent; /* Garante que o fundo é transparente */
+    padding: 20px 30px;
+    background: transparent;
+    z-index: 100;
 }
 
 header h1 {
@@ -49,87 +41,80 @@ header h1 {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .icons {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 
 .icons a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
-.icons i {
-    font-size: 18px;
-}
-
+/* Main Section */
 main {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     overflow: hidden;
 }
 
 main img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra toda a área */
+    object-fit: cover;
 }
 
 .overlay {
-    font-family: "Orpheus Pro";
     position: absolute;
     color: white;
     text-align: center;
     line-height: 1.4;
+    padding: 0 20px;
 }
 
 .overlay h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 100;
     margin-bottom: 20px;
 }
 
 .overlay p {
-    font-size: 1.2rem;
-    line-height: 1.6em;
-    margin-bottom: 60px;
-}
-
-img {
-    display: block;
+    font-size: 1rem;
+    margin-bottom: 40px;
 }
 
 button {
-    padding: 20px;
+    padding: 15px;
     font-size: 1rem;
     font-weight: 600;
-    width: 30%;
+    width: auto;
     background-color: #a8a6a1;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
+
 button:hover {
     background-color: #8d8c8c;
 }
 
-/* Pop-Up*/
-
-/* Fundo do pop-up */
+/* Pop-Up */
 .popup {
     display: none;
     position: fixed;
@@ -142,193 +127,105 @@ button:hover {
     justify-content: center;
 }
 
-/* Conteúdo do pop-up */
 .popup-content {
     background: white;
-    padding: 50px;
-    width: 50%;
-    height: 600px;
-    max-width: 700px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
     position: relative;
 }
 
 .popup-content h2 {
-    font-size: 2.2rem;
-    font-weight: 300;
-    margin-bottom: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
-/* Botão de fechar */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 2em;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Estilizando o formulário */
 form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-label span {
-    font-weight: normal;
-    color: gray;
-}
-
-.input-group {
-    display: flex;
     gap: 10px;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 15px;
-    margin-top: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.botao {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
 .submit-btn {
     background: black;
     color: white;
-    padding: 15px;
+    padding: 10px;
     border: none;
     margin-top: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 .submit-btn:hover {
     background: #444;
 }
 
-/* Validação do Form*/
-.form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.form-control i {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    visibility: hidden;
-}
-
-.form-control small {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-}
-
-/* Error and Success */
-.form-control.invisible i.fa-check-circle,
-i.fa-exclamation-circle {
-    visibility: none;
-}
-
-.form-control.success i.fa-check-circle {
-    color: #2ecc71;
-    visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
-}
-
-.form-control.error small {
-    visibility: visible;
-    color: #e74c3c;
-}
-
 /* Footer */
-
 .footer {
     background-color: #38383b;
     width: 100%;
-    height: 30vh;
-    padding: 60px 60px;
-    font-size: 1.7rem;
+    padding: 40px 20px;
     color: #fff;
 }
 
-/* Layout flexível para alinhar os itens */
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 .footer-left h2 {
     font-weight: 200;
-}
-
-.footer-left a {
-    color: #a3a3a3;
-    text-decoration: none;
-}
-
-.footer-left a:hover {
-    text-decoration: underline;
+    margin-bottom: 10px;
 }
 
 .social-icons a {
     color: white;
     font-size: 1.2rem;
-    margin-right: 10px;
-    text-decoration: none;
+    margin: 0 10px;
 }
 
-/* Parte direita com links */
-.footer-right {
-    display: flex;
-    gap: 40px;
-}
-
-/* Links do menu */
 .footer-links {
     display: flex;
-    flex-direction: column;
+    gap: 15px;
 }
 
 .footer-links a {
     color: #a3a3a3;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
+    font-size: 1rem;
     text-decoration: underline;
-    margin-bottom: 5px;
 }
 
-/* Responsividade */
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Responsiveness */
 @media (max-width: 1024px) {
     header {
         flex-wrap: wrap;
@@ -353,18 +250,19 @@ i.fa-exclamation-circle {
     }
 
     .footer-container {
-        flex-direction: row;
-        align-items: start;
+        flex-direction: column;
+        text-align: center;
     }
 }
 
 @media (max-width: 768px) {
     header {
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
     }
 
     nav ul {
+        flex-direction: column;
         gap: 15px;
     }
 
@@ -380,18 +278,8 @@ i.fa-exclamation-circle {
         padding: 20px;
     }
 
-    .footer-container {
-        flex-direction: row;
-    }
-
-    .footer-container {
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-right {
+    .footer-links {
         flex-direction: column;
-        margin-top: 20px;
     }
 }
 
@@ -418,16 +306,6 @@ i.fa-exclamation-circle {
 
     .popup-content {
         width: 90%;
-    }
-
-    .footer {
-        padding: 20px 20px;
-    }
-}
-
-@media (max-width: 375px) {
-    .popup-content {
-        width: 80%;
     }
 }
 
