@@ -568,6 +568,12 @@ nav ul li a {
     }
 }
 
+@media (max-width: 1440px) {
+    .gift-card img {
+        width: 80%;
+    }
+}
+
 @media (max-width: 590px) {
     header {
         flex-direction: column;
